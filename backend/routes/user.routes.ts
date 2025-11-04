@@ -4,7 +4,7 @@ import { authMiddleware } from "../middlewares/auth";
 
 const router = express.Router();
 
-router.post("/", createUser);
+router.post("/signup", createUser);
 router.get("/:userId/rooms", getUserRooms); // optional public
 router.get("/me/rooms", authMiddleware, getMyRooms); // protected
 

@@ -61,9 +61,9 @@ export default function Whiteboard({ roomId }: { roomId: string }) {
   const handleMouseUp = () => setDrawing(false)
 
   return (
-    <div className="min-h-screen w-full bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex flex-col items-center justify-center p-6">
+    <div className="min-h-screen w-full bg-linear-to-br from-slate-900 via-slate-800 to-slate-900 flex flex-col items-center justify-center p-6">
       <div className="mb-8 text-center">
-        <h2 className="text-4xl font-bold bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent mb-2">
+        <h2 className="text-4xl font-bold bg-linear-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent mb-2">
           Whiteboard Canvas
         </h2>
         <p className="text-slate-400 text-sm font-medium">
@@ -72,13 +72,13 @@ export default function Whiteboard({ roomId }: { roomId: string }) {
       </div>
 
       <div className="relative">
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-cyan-500/20 rounded-2xl blur-xl opacity-60"></div>
+        <div className="absolute inset-0 bg-linear-to-r from-blue-600/20 to-cyan-500/20 rounded-2xl blur-xl opacity-60"></div>
         <div className="relative bg-white backdrop-blur-sm border-2 border-cyan-500/30 rounded-2xl p-2 shadow-2xl hover:border-cyan-500/50 transition-all duration-300">
           <canvas
             ref={canvasRef}
             width={800}
             height={500}
-            className="border-2 border-cyan-400/40 rounded-xl bg-gradient-to-br from-slate-950 to-slate-900 cursor-crosshair hover:border-cyan-400/60 transition-all duration-200 shadow-inner"
+            className="border-2 border-cyan-400/40 rounded-xl bg-linear-to-br from-slate-950 to-slate-900 cursor-crosshair hover:border-cyan-400/60 transition-all duration-200 shadow-inner"
             onMouseDown={handleMouseDown}
             onMouseMove={handleMouseMove}
             onMouseUp={handleMouseUp}
