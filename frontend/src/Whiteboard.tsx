@@ -73,7 +73,7 @@ export default function Whiteboard({ roomId }: { roomId: string }) {
 
       <div className="relative">
         <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-cyan-500/20 rounded-2xl blur-xl opacity-60"></div>
-        <div className="relative bg-slate-800/80 backdrop-blur-sm border-2 border-cyan-500/30 rounded-2xl p-2 shadow-2xl hover:border-cyan-500/50 transition-all duration-300">
+        <div className="relative bg-white backdrop-blur-sm border-2 border-cyan-500/30 rounded-2xl p-2 shadow-2xl hover:border-cyan-500/50 transition-all duration-300">
           <canvas
             ref={canvasRef}
             width={800}

@@ -1,8 +1,10 @@
 import express from "express";
-import { createRoom, getRoom } from "../controller/roomController.ts";
+import { createRoom, getRoom , joinRoom } from "../controller/roomController";
 const router = express.Router();
+import { authMiddleware } from "../middlewares/auth";
 
-router.post("/", createRoom);
+router.post("/", authMiddleware, createRoom);      // create room (auth required)
+router.post("/join", authMiddleware, joinRoom);  
 router.get("/:id", getRoom);
 
 export default router;
