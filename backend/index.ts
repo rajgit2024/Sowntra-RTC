@@ -14,9 +14,6 @@ import prisma from "./db/db";
 const app = express();
 app.use(cors());
 app.use(express.json());
-console.log("Loaded environment variables:");
-console.log("PORT =", process.env.PORT);
-console.log("DATABASE_URL =", process.env.DATABASE_URL);
 // Routes
 app.use('/api/users', userRoutes);
 app.use('/api/rooms', roomRoutes);
